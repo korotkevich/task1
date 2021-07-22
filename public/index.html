@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./css/index.css">
+    <!--        <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.16.0.css">-->
+    <!--        <script src="https://code.jquery.com/qunit/qunit-2.16.0.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <title>Exercise-1</title>
+</head>
+
+<body>
+<div class="list-wrapper">
+    <!--            <div id="qunit"></div>-->
+    <!--            <div id="qunit-fixture"></div>-->
+    <ul class="list">
+    </ul>
+    <script id="users-list" type="text/x-handlebars-template">
+        {{#each data}}
+            <li class="list-item">
+                <div>
+                    <img src={{avatar}}>
+                </div>
+                <div class="list-item-content">
+                    <h4>{{ first_name}} {{ last_name }}</h4>
+                    <p class="hidden">Id:{{id}} Email: {{email}}</p>
+                </div>
+                <div>
+                </div>
+            </li>
+        {{/each}}
+    </script>
+</div>
+<script src="./js/index.js"></script>
+<!-- <script src="./js/index.spec.js"></script>-->
+</body>
+
+</html>
